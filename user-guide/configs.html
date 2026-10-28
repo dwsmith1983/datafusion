@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -8,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Configuration Settings &#8212; Apache DataFusion  documentation</title>
+    <title>Configuration Settings &#8212; Apache DataFusion main documentation</title>
   
   
   
@@ -27,22 +26,29 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=18bd87630a240e9c25be" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/theme_overrides.css?v=d08b24aa" />
   
   <!-- So that users can add custom icons -->
-  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../_static/scripts/fontawesome.js?digest=18bd87630a240e9c25be"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be" />
 
-    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/documentation_options.js?v=a8da1a53"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user-guide/configs';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.23.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = '/_static/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'main';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
     <link rel="canonical" href="https://datafusion.apache.org/user-guide/configs.html" />
     <link rel="icon" href="../_static/favicon.svg"/>
@@ -51,8 +57,9 @@
     <link rel="next" title="Reading Explain Plans" href="explain-usage.html" />
     <link rel="prev" title="Prepared Statements" href="sql/prepared_statements.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="color-scheme" content="light dark"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="main" />
   
     
     <script src="../_static/searchtools.js"></script>
@@ -100,7 +107,7 @@
   
     <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
 <div class="bd-header__inner bd-page-width">
-  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+  <button type="button" class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
   </button>
   
@@ -124,8 +131,8 @@
       
     
     
-    <img src="../_static/original.svg" class="logo__image only-light" alt="Apache DataFusion  documentation - Home"/>
-    <img src="../_static/original_dark.svg" class="logo__image only-dark pst-js-only" alt="Apache DataFusion  documentation - Home"/>
+    <img src="../_static/original.svg" class="logo__image only-light" alt="Apache DataFusion main documentation - Home"/>
+    <img src="../_static/original_dark.svg" class="logo__image only-dark pst-js-only" alt="Apache DataFusion main documentation - Home"/>
   
   
 </a></div>
@@ -140,7 +147,7 @@
         <div class="navbar-item navbar-persistent--container">
           
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -149,17 +156,37 @@
       
       
         <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+        <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
     <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
     <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
     <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
   </ul>
 </div></div>
       
@@ -170,7 +197,7 @@
   
     <div class="navbar-persistent--mobile">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button type="button" class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
  <i class="fa-solid fa-magnifying-glass"></i>
  <span class="search-button__default-text">Search</span>
  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
@@ -179,7 +206,7 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+    <button type="button" class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
     </button>
   
@@ -206,17 +233,37 @@
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+          <div class="navbar-item">
 
 <div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+  <button type="button" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
     <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
     <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
     <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
   </button>
   <ul class="dropdown-menu dropdown-menu-end">
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
-    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button type="button" class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
   </ul>
 </div></div>
         
@@ -289,7 +336,7 @@
 <li class="toctree-l2"><a class="reference internal" href="sql/prepared_statements.html">Prepared Statements</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Configuration Settings</a></li>
+<li class="toctree-l1 current active"><a aria-current="page" class="current reference internal" href="#">Configuration Settings</a></li>
 
 
 
@@ -302,6 +349,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Library User Guide</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../library-user-guide/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../library-user-guide/securing-datafusion.html">Securing DataFusion</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../library-user-guide/upgrading/index.html">Upgrade Guides</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../library-user-guide/upgrading/56.0.0.html">DataFusion 56.0.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../library-user-guide/upgrading/55.0.0.html">DataFusion 55.0.0</a></li>
@@ -340,6 +388,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/index.html">Introduction</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="../contributor-guide/ai-policy.html">AI Policy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/pr_review.html">Reviewing Pull Requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/communication.html">Community Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contributor-guide/development_environment.html">Development Environment</a></li>
@@ -506,177 +555,193 @@ example, to configure <code class="docutils literal notranslate"><span class="pr
 <td><p>false</p></td>
 <td><p>Should DataFusion provide access to <code class="docutils literal notranslate"><span class="pre">information_schema</span></code> virtual tables for displaying schema information</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.catalog.location</p></td>
+<tr class="row-even"><td><p>datafusion.catalog.system_catalog</p></td>
+<td><p>NULL</p></td>
+<td><p>The system catalog name - when set together with <code class="docutils literal notranslate"><span class="pre">information_schema</span></code>, the <code class="docutils literal notranslate"><span class="pre">information_schema</span></code> for each catalog will only describe objects contained in the catalog itself. The global, cross-catalog <code class="docutils literal notranslate"><span class="pre">information_schema</span></code> is available under the virtual catalog named by this option.</p></td>
+</tr>
+<tr class="row-odd"><td><p>datafusion.catalog.location</p></td>
 <td><p>NULL</p></td>
 <td><p>Location scanned to load tables for <code class="docutils literal notranslate"><span class="pre">default</span></code> schema</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.catalog.format</p></td>
+<tr class="row-even"><td><p>datafusion.catalog.format</p></td>
 <td><p>NULL</p></td>
 <td><p>Type of <code class="docutils literal notranslate"><span class="pre">TableProvider</span></code> to use when loading <code class="docutils literal notranslate"><span class="pre">default</span></code> schema</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.catalog.has_header</p></td>
+<tr class="row-odd"><td><p>datafusion.catalog.has_header</p></td>
 <td><p>true</p></td>
 <td><p>Default value for <code class="docutils literal notranslate"><span class="pre">format.has_header</span></code> for <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">EXTERNAL</span> <span class="pre">TABLE</span></code> if not specified explicitly in the statement.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.catalog.newlines_in_values</p></td>
+<tr class="row-even"><td><p>datafusion.catalog.newlines_in_values</p></td>
 <td><p>false</p></td>
 <td><p>Specifies whether newlines in (quoted) CSV values are supported. This is the default value for <code class="docutils literal notranslate"><span class="pre">format.newlines_in_values</span></code> for <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">EXTERNAL</span> <span class="pre">TABLE</span></code> if not specified explicitly in the statement. Parsing newlines in quoted values may be affected by execution behaviour such as parallel file scanning. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> ensures that newlines in values are parsed successfully, which may reduce performance.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.batch_size</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.batch_size</p></td>
 <td><p>8192</p></td>
 <td><p>Default batch size while creating new batches, it’s especially useful for buffer-in-memory batches since creating tiny batches would result in too much metadata memory consumption</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.perfect_hash_join_small_build_threshold</p></td>
+<tr class="row-even"><td><p>datafusion.execution.perfect_hash_join_small_build_threshold</p></td>
 <td><p>1024</p></td>
 <td><p>A perfect hash join (see <code class="docutils literal notranslate"><span class="pre">HashJoinExec</span></code> for more details) will be considered if the range of keys (max - min) on the build side is &lt; this threshold. This provides a fast path for joins with very small key ranges, bypassing the density check. Currently only supports cases where build_side.num_rows() &lt; u32::MAX. Support for build_side.num_rows() &gt;= u32::MAX will be added in the future.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.perfect_hash_join_min_key_density</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.perfect_hash_join_min_key_density</p></td>
 <td><p>0.15</p></td>
 <td><p>The minimum required density of join keys on the build side to consider a perfect hash join (see <code class="docutils literal notranslate"><span class="pre">HashJoinExec</span></code> for more details). Density is calculated as: <code class="docutils literal notranslate"><span class="pre">(number</span> <span class="pre">of</span> <span class="pre">rows)</span> <span class="pre">/</span> <span class="pre">(max_key</span> <span class="pre">-</span> <span class="pre">min_key</span> <span class="pre">+</span> <span class="pre">1)</span></code>. A perfect hash join may be used if the actual key density &gt; this value. Currently only supports cases where build_side.num_rows() &lt; u32::MAX. Support for build_side.num_rows() &gt;= u32::MAX will be added in the future.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.coalesce_batches</p></td>
+<tr class="row-even"><td><p>datafusion.execution.coalesce_batches</p></td>
 <td><p>true</p></td>
 <td><p>When set to true, record batches will be examined between each operator and small batches will be coalesced into larger batches. This is helpful when there are highly selective filters or joins that could produce tiny output batches. The target batch size is determined by the configuration setting</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.collect_statistics</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.collect_statistics</p></td>
 <td><p>true</p></td>
 <td><p>Should DataFusion collect statistics when first creating a table. Has no effect after the table is created. Defaults to true.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.target_partitions</p></td>
+<tr class="row-even"><td><p>datafusion.execution.target_partitions</p></td>
 <td><p>0</p></td>
 <td><p>Number of partitions for query execution. Increasing partitions can increase concurrency. Defaults to the number of CPU cores on the system</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.time_zone</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.time_zone</p></td>
 <td><p>NULL</p></td>
-<td><p>The default time zone Some functions, e.g. <code class="docutils literal notranslate"><span class="pre">now</span></code> return timestamps in this time zone</p></td>
+<td><p>The default time zone Some functions, e.g. <code class="docutils literal notranslate"><span class="pre">now</span></code>, return timestamps in this time zone. This is also used to interpret timezone-naive timestamps in comparisons and subtraction with timezone-aware timestamps.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.enable_page_index</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.enable_page_index</p></td>
 <td><p>true</p></td>
 <td><p>(reading) If true, reads the Parquet data page level metadata (the Page Index), if present, to reduce the I/O and number of rows decoded.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.pruning</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.pruning</p></td>
 <td><p>true</p></td>
 <td><p>(reading) If true, the parquet reader attempts to skip entire row groups based on the predicate in the query and the metadata (min/max values) stored in the parquet file</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.skip_metadata</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.skip_metadata</p></td>
 <td><p>true</p></td>
 <td><p>(reading) If true, the parquet reader skip the optional embedded metadata that may be in the file Schema. This setting can help avoid schema conflicts when querying multiple parquet files with schemas containing compatible types but different metadata</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.metadata_size_hint</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.metadata_size_hint</p></td>
 <td><p>524288</p></td>
 <td><p>(reading) If specified, the parquet reader will try and fetch the last <code class="docutils literal notranslate"><span class="pre">size_hint</span></code> bytes of the parquet file optimistically. If not specified, two reads are required: One read to fetch the 8-byte parquet footer and another to fetch the metadata length encoded in the footer Default setting to 512 KiB, which should be sufficient for most parquet files, it can reduce one I/O operation per parquet file. If the metadata is larger than the hint, two reads will still be performed.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.pushdown_filters</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.pushdown_filters</p></td>
 <td><p>false</p></td>
 <td><p>(reading) If true, filter expressions are be applied during the parquet decoding operation to reduce the number of rows decoded. This optimization is sometimes called “late materialization”.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.reorder_filters</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.reorder_filters</p></td>
 <td><p>false</p></td>
 <td><p>(reading) If true, filter expressions evaluated during the parquet decoding operation will be reordered heuristically to minimize the cost of evaluation. If false, the filters are applied in the same order as written in the query</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.force_filter_selections</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.force_filter_selections</p></td>
 <td><p>false</p></td>
 <td><p>(reading) Force the use of RowSelections for filter results, when pushdown_filters is enabled. If false, the reader will automatically choose between a RowSelection and a Bitmap based on the number and pattern of selected rows.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.schema_force_view_types</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.schema_force_view_types</p></td>
 <td><p>true</p></td>
 <td><p>(reading) If true, parquet reader will read columns of <code class="docutils literal notranslate"><span class="pre">Utf8/Utf8Large</span></code> with <code class="docutils literal notranslate"><span class="pre">Utf8View</span></code>, and <code class="docutils literal notranslate"><span class="pre">Binary/BinaryLarge</span></code> with <code class="docutils literal notranslate"><span class="pre">BinaryView</span></code>. The parquet reader is optimized for reading <code class="docutils literal notranslate"><span class="pre">Utf8View</span></code> and <code class="docutils literal notranslate"><span class="pre">BinaryView</span></code>, so such queries are significantly faster than reading <code class="docutils literal notranslate"><span class="pre">Utf8</span></code>/<code class="docutils literal notranslate"><span class="pre">Binary</span></code> and then casting to the view types.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.binary_as_string</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.binary_as_string</p></td>
 <td><p>false</p></td>
 <td><p>(reading) If true, parquet reader will read columns of <code class="docutils literal notranslate"><span class="pre">Binary/LargeBinary</span></code> with <code class="docutils literal notranslate"><span class="pre">Utf8</span></code>, and <code class="docutils literal notranslate"><span class="pre">BinaryView</span></code> with <code class="docutils literal notranslate"><span class="pre">Utf8View</span></code>. Parquet files generated by some legacy writers do not correctly set the UTF8 flag for strings, causing string columns to be loaded as BLOB instead. The parquet reader has special optimizations for <code class="docutils literal notranslate"><span class="pre">Utf8</span></code> validation, so reading such columns as strings is significantly faster than reading them as binary and then casting to string.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.coerce_int96</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.coerce_int96</p></td>
 <td><p>NULL</p></td>
-<td><p>(reading) If true, parquet reader will read columns of physical type int96 as originating from a different resolution than nanosecond. This is useful for reading data from systems like Spark which stores microsecond resolution timestamps in an int96 allowing it to write values with a larger date range than 64-bit timestamps with nanosecond resolution.</p></td>
+<td><p>(reading) If set, parquet reader will read columns of physical type int96 as originating from this resolution instead of nanosecond. Valid values are: ns, us, ms, and s. This is useful for reading data from systems like Spark which store microsecond resolution timestamps in an int96, allowing them to write values with a larger date range than 64-bit timestamps with nanosecond resolution.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.coerce_int96_tz</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.coerce_int96_tz</p></td>
 <td><p>NULL</p></td>
-<td><p>(reading) Optional timezone applied to INT96 columns when <code class="docutils literal notranslate"><span class="pre">coerce_int96</span></code> is set. When <code class="docutils literal notranslate"><span class="pre">Some</span></code>, INT96 columns coerce to <code class="docutils literal notranslate"><span class="pre">Timestamp(&lt;coerce_int96&gt;,</span> <span class="pre">Some(&lt;tz&gt;))</span></code> instead of the default <code class="docutils literal notranslate"><span class="pre">Timestamp(&lt;coerce_int96&gt;,</span> <span class="pre">None)</span></code>. Spark and other systems write INT96 values as UTC-adjusted instants, so callers that need the resulting Arrow type to be timezone-aware (e.g. for Spark <code class="docutils literal notranslate"><span class="pre">TimestampType</span></code> semantics) should set this to <code class="docutils literal notranslate"><span class="pre">&quot;UTC&quot;</span></code>. No effect when <code class="docutils literal notranslate"><span class="pre">coerce_int96</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></td>
+<td><p>(reading) Optional timezone applied to INT96 columns when <code class="docutils literal notranslate"><span class="pre">coerce_int96</span></code> is set. When <code class="docutils literal notranslate"><span class="pre">Some</span></code>, INT96 columns coerce to <code class="docutils literal notranslate"><span class="pre">Timestamp(&lt;coerce_int96&gt;,</span> <span class="pre">Some(&lt;tz&gt;))</span></code> instead of the default <code class="docutils literal notranslate"><span class="pre">Timestamp(&lt;coerce_int96&gt;,</span> <span class="pre">None)</span></code>. Spark and other systems write INT96 values as UTC-adjusted instants, so callers that need the resulting Arrow type to be timezone-aware (e.g. for Spark <code class="docutils literal notranslate"><span class="pre">TimestampType</span></code> semantics) should set this to <code class="docutils literal notranslate"><span class="pre">&quot;UTC&quot;</span></code>. No effect when <code class="docutils literal notranslate"><span class="pre">coerce_int96</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, but the value is still validated when it is set.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.bloom_filter_on_read</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.bloom_filter_on_read</p></td>
 <td><p>true</p></td>
 <td><p>(reading) Use any available bloom filters when reading parquet files</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.max_predicate_cache_size</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.max_predicate_cache_size</p></td>
 <td><p>NULL</p></td>
 <td><p>(reading) The maximum predicate cache size, in bytes. When <code class="docutils literal notranslate"><span class="pre">pushdown_filters</span></code> is enabled, sets the maximum memory used to cache the results of predicate evaluation between filter evaluation and output generation. Decreasing this value will reduce memory usage, but may increase IO and CPU usage. None means use the default parquet reader setting. 0 means no caching.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.max_in_list_size</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.max_in_list_size</p></td>
 <td><p>20</p></td>
 <td><p>Maximum number of input values in an <code class="docutils literal notranslate"><span class="pre">IN</span> <span class="pre">(...)</span></code> list eligible for min/max pruning. Lists above this cap, or a cap of 0, skip this rewrite; other predicates and Bloom-filter pruning remain available. Within the cap, nonempty lists of at most 20 values use the existing per-value rewrite. Larger literal lists use a compact representation when the column type is string, variable-length binary, integer, decimal, date, time, timestamp, or duration. This applies to both <code class="docutils literal notranslate"><span class="pre">IN</span></code> and <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">IN</span></code>, including lists with NULL members. <code class="docutils literal notranslate"><span class="pre">NOT</span> <span class="pre">IN</span></code> with NULL and all-NULL <code class="docutils literal notranslate"><span class="pre">IN</span></code> lists cannot match any rows. Compact lists containing NULL do not use the fully-matched-row-group optimization. Floating-point and other lists retain the existing per-value rewrite, so raising the cap can make those predicates expensive to build and evaluate. Defaults to 20.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.data_pagesize_limit</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.enable_rle_to_dictionary</p></td>
+<td><p>false</p></td>
+<td><p>(reading) If true, top-level string and binary Parquet columns with dictionary pages are inferred and scanned as <code class="docutils literal notranslate"><span class="pre">Dictionary&lt;Int32,</span> <span class="pre">Utf8&gt;</span></code> / <code class="docutils literal notranslate"><span class="pre">Dictionary&lt;Int32,</span> <span class="pre">Binary&gt;</span></code> instead of their plain value type. This applies only when DataFusion infers the table schema. Tables with a user-supplied schema are not promoted because the Parquet footer is not read at DDL time, so dictionary pages cannot be detected per column. See <a class="github reference external" href="https://github.com/apache/datafusion/issues/24112">apache/datafusion#24112</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.row_group_range_assignment</p></td>
+<td><p>start_offset</p></td>
+<td><p>(reading) Which byte range of a split file reads each row group. <code class="docutils literal notranslate"><span class="pre">start_offset</span></code> picks the range containing the row group’s start. <code class="docutils literal notranslate"><span class="pre">midpoint</span></code> picks the range containing its midpoint, as Spark does, which spreads large row groups more evenly across ranges.</p></td>
+</tr>
+<tr class="row-even"><td><p>datafusion.execution.parquet.data_pagesize_limit</p></td>
 <td><p>1048576</p></td>
 <td><p>(writing) Sets best effort maximum size of data page in bytes</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.write_batch_size</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.write_batch_size</p></td>
 <td><p>1024</p></td>
 <td><p>(writing) Sets write_batch_size in rows</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.writer_version</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.writer_version</p></td>
 <td><p>1.0</p></td>
 <td><p>(writing) Sets parquet writer version valid values are “1.0” and “2.0”</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.skip_arrow_metadata</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.skip_arrow_metadata</p></td>
 <td><p>false</p></td>
 <td><p>(writing) Skip encoding the embedded arrow metadata in the KV_meta This is analogous to the <code class="docutils literal notranslate"><span class="pre">ArrowWriterOptions::with_skip_arrow_metadata</span></code>. Refer to <a class="reference external" href="https://docs.rs/parquet/53.3.0/parquet/arrow/arrow_writer/struct.ArrowWriterOptions.html#method.with_skip_arrow_metadata">https://docs.rs/parquet/53.3.0/parquet/arrow/arrow_writer/struct.ArrowWriterOptions.html#method.with_skip_arrow_metadata</a></p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.compression</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.compression</p></td>
 <td><p>zstd(3)</p></td>
 <td><p>(writing) Sets default parquet compression codec. Valid values are: uncompressed, snappy, gzip(level), brotli(level), lz4, zstd(level), and lz4_raw. These values are not case sensitive. If NULL, uses default parquet writer setting Note that this default setting is not the same as the default parquet writer setting.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.dictionary_enabled</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.dictionary_enabled</p></td>
 <td><p>true</p></td>
 <td><p>(writing) Sets if dictionary encoding is enabled. If NULL, uses default parquet writer setting</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.dictionary_page_size_limit</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.dictionary_page_size_limit</p></td>
 <td><p>1048576</p></td>
 <td><p>(writing) Sets best effort maximum dictionary page size, in bytes</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.statistics_enabled</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.statistics_enabled</p></td>
 <td><p>page</p></td>
 <td><p>(writing) Sets if statistics are enabled for any column Valid values are: “none”, “chunk”, and “page” These values are not case sensitive. If NULL, uses default parquet writer setting</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.max_row_group_size</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.max_row_group_size</p></td>
 <td><p>1048576</p></td>
 <td><p>(writing) Target maximum number of rows in each row group (defaults to 1M rows). Writing larger row groups requires more memory to write, but can get better compression and be faster to read. When <code class="docutils literal notranslate"><span class="pre">max_row_group_bytes</span></code> is also set, the writer flushes a row group when either limit is reached, whichever comes first.</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.max_row_group_bytes</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.max_row_group_bytes</p></td>
 <td><p>NULL</p></td>
 <td><p>(writing) Target maximum size of each row group in bytes. When set, the writer flushes whenever either this limit or <code class="docutils literal notranslate"><span class="pre">max_row_group_size</span></code> is reached, whichever comes first. Useful for bounding writer memory on wide schemas where a row-count limit can map to very different byte sizes. Matches the behavior of <code class="docutils literal notranslate"><span class="pre">parquet.block.size</span></code> in parquet-mr. If <code class="docutils literal notranslate"><span class="pre">None</span></code> (the default), only the row-count limit applies. Currently only honored when <code class="docutils literal notranslate"><span class="pre">allow_single_file_parallelism</span></code> is <code class="docutils literal notranslate"><span class="pre">false</span></code>; by default the parallel file writer ignores this limit.</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.created_by</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.created_by</p></td>
 <td><p>datafusion version 55.1.0</p></td>
 <td><p>(writing) Sets “created by” property</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.column_index_truncate_length</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.column_index_truncate_length</p></td>
 <td><p>64</p></td>
 <td><p>(writing) Sets column index truncate length</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.statistics_truncate_length</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.statistics_truncate_length</p></td>
 <td><p>64</p></td>
 <td><p>(writing) Sets statistics truncate length. If NULL, uses default parquet writer setting</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.data_page_row_count_limit</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.data_page_row_count_limit</p></td>
 <td><p>20000</p></td>
 <td><p>(writing) Sets best effort maximum number of rows in data page</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.encoding</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.encoding</p></td>
 <td><p>NULL</p></td>
 <td><p>(writing) Sets default encoding for any column. Valid values are: plain, plain_dictionary, rle, bit_packed, delta_binary_packed, delta_length_byte_array, delta_byte_array, rle_dictionary, and byte_stream_split. These values are not case sensitive. If NULL, uses default parquet writer setting</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.bloom_filter_on_write</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.bloom_filter_on_write</p></td>
 <td><p>false</p></td>
 <td><p>(writing) Write bloom filters for all columns when creating parquet files</p></td>
 </tr>
-<tr class="row-odd"><td><p>datafusion.execution.parquet.bloom_filter_fpp</p></td>
+<tr class="row-even"><td><p>datafusion.execution.parquet.bloom_filter_fpp</p></td>
 <td><p>NULL</p></td>
 <td><p>(writing) Sets bloom filter false positive probability. If NULL, uses default parquet writer setting</p></td>
 </tr>
-<tr class="row-even"><td><p>datafusion.execution.parquet.bloom_filter_ndv</p></td>
+<tr class="row-odd"><td><p>datafusion.execution.parquet.bloom_filter_ndv</p></td>
 <td><p>NULL</p></td>
 <td><p>(writing) Sets bloom filter number of distinct values. If NULL, uses default parquet writer setting</p></td>
+</tr>
+<tr class="row-even"><td><p>datafusion.execution.parquet.write_row_group_number_distinct_values</p></td>
+<td><p>false</p></td>
+<td><p>(writing) Write the number of distinct values (NDV) for each column in row group statistics when creating parquet files. Enabling this improves NDV-based query optimizations at the cost of hashing every non-null value during write.</p></td>
 </tr>
 <tr class="row-odd"><td><p>datafusion.execution.parquet.allow_single_file_parallelism</p></td>
 <td><p>true</p></td>
@@ -908,7 +973,7 @@ example, to configure <code class="docutils literal notranslate"><span class="pr
 </tr>
 <tr class="row-even"><td><p>datafusion.optimizer.max_passes</p></td>
 <td><p>3</p></td>
-<td><p>Number of times that the optimizer will attempt to optimize the plan</p></td>
+<td><p>The logical optimizer applies rules in order for up to <code class="docutils literal notranslate"><span class="pre">max_passes</span></code> passes, stopping early if a pass leaves the plan unchanged or repeats an earlier plan. The physical optimizer always runs in one pass.</p></td>
 </tr>
 <tr class="row-odd"><td><p>datafusion.optimizer.top_down_join_key_reordering</p></td>
 <td><p>true</p></td>
@@ -1372,8 +1437,8 @@ equal in size.</p></li>
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=18bd87630a240e9c25be"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=18bd87630a240e9c25be"></script>
 
 <!-- Based on pydata_sphinx_theme/footer.html -->
 <footer class="footer mt-5 mt-md-0">
